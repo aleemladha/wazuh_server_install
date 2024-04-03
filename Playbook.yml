@@ -1,0 +1,6 @@
+#Aleem Ladha @LadhaAleem
+- name: Install and configure Wazuh Manager
+  hosts: wazuh_server
+  become: yes
+  roles:
+    - wazuh_manager
