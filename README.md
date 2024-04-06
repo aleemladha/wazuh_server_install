@@ -7,7 +7,7 @@
   hosts: wazuh
   become: yes
   roles:
-    - wazuh_server
+    - wazuh_server_install
                                       
 ```
 
