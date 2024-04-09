@@ -1,4 +1,13 @@
-# Ansible Role to Install wazuh SIEM Unified XDR and SIEM protection
+# Ansible Role to Install Wazuh SIEM Unified XDR and SIEM protection with SOC Fortress Rules
+
+## Why use Wazuh with SocFortress Rules: <a href="https://socfortress.medium.com/">SocFortress Blog</a>
+
+The objective for this repo is to provide the Wazuh community with rulesets that are more accurate, descriptive, and enriched from various sources and integrations.
+
+Here's why:
+* Detection rules can be a tricky business and we believe everyone should have access to a strong and growing ruleset.
+* Wazuh serves as a great EDR agent, however the default rulesets are rather laxed (in our opinion). We wanted to start building a strong repo of Wazuh rules for the community to implement themselves and expand upon as new threats arise.
+* Cybersecurity is hard enough, let's work together :smile:
 
 # Ansible Role: Wazuh SIEM Deployment
 
@@ -149,7 +158,7 @@ Apache-2.0
 This role was created by [Aleem ladha ](https://github.com/aleemladha)
 
 ## Resources/Credits
-
+- https://github.com/socfortress/Wazuh-Rules
 - https://documentation.wazuh.com/current/installation-guide/index.html
 - https://wazuh.com/
 - https://github.com/badsectorlabs/ludus_elastic_container
