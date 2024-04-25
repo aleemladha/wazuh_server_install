@@ -26,7 +26,7 @@
   register: access_info
 
 - name: Display username and password
-  debug:
+  ansible.builtin.debug:
     msg:
       - "Username: {{ access_info.stdout_lines[0] }}"
       - "Password: {{ access_info.stdout_lines[1] }}"
