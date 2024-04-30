@@ -1,3 +1,12 @@
+- name: Install Wazuh prerequisites
+  package:
+    name: "{{ package }}"
+    state: latest
+  loop: 
+    - ca-certificates
+  loop_control:
+    loop_var: package
+
 - name: Download Wazuh installation script
   get_url:
     url: "{{ wazuh_install_script_url }}"
