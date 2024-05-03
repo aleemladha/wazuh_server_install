@@ -80,7 +80,7 @@ ludus range logs -f
 
 ```
 
-#The output will be
+The output will be
 
 ```
 ok: [SCCM-wazuh] => {
@@ -92,7 +92,7 @@ ok: [SCCM-wazuh] => {
 ```
 
 
-- Once deployed, access the wazuh UI at `https://<IP>:`
+Once deployed, access the wazuh UI at `https://<IP>:`
 
 
 ## Ludus Game of Active Directory (GOAD) Wazuh setup
