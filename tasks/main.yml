@@ -4,6 +4,7 @@
     state: latest
   loop: 
     - ca-certificates
+    - git
   loop_control:
     loop_var: package
 
