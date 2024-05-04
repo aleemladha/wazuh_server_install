@@ -11,7 +11,7 @@ Here's why:
 
 # Ansible Role: Wazuh SIEM Deployment
 
-An Ansible role that runs the Wazuh SIEM on a Linux system
+An Ansible role that runs the Wazuh SIEM on a Linux system. By default, the password is auto-generated and printed in the logs. As an option, the role variable `wazuh_admin_password` can be used to set it manually.
 
 
 ## Requirements
@@ -19,6 +19,15 @@ An Ansible role that runs the Wazuh SIEM on a Linux system
 None.
 
 ## Role Variables
+
+Available variables are listed below, along with default values (see `defaults/main.yml`):
+
+    # Wazuh installation script URL
+    wazuh_install_script_url: "https://packages.wazuh.com/4.7/wazuh-install.sh"
+    # SOCFORTRESS Wazuh rules script URL
+    socfortress_rules_script_url: "https://raw.githubusercontent.com/aaladha/Wazuh-Rules/main/wazuh_socfortress_rules.sh"
+    # (Optional) Force admin password
+    wazuh_admin_password: Wazuh-123
 
 
 ## Example Playbook
@@ -46,6 +55,8 @@ ludus:
       block_internet: false
     roles:
       - aleemladha.wazuh_server_install
+    role_vars:
+      wazuh_admin_password: Wazuh-123
 ```
 
 ## Ludus setup
@@ -63,13 +74,13 @@ ludus range config set -f config.yml
 # Deploy the range and access the wazuh SIEM
 ludus range deploy
 
-#The username and password is generated and secured, you can access can it using
+# By default, unless specified manually, the username and password is generated and secured, you can access can it using
 
 ludus range logs -f
 
 ```
 
-#The output will be
+The output will be
 
 ```
 ok: [SCCM-wazuh] => {
@@ -81,7 +92,7 @@ ok: [SCCM-wazuh] => {
 ```
 
 
-- Once deployed, access the wazuh UI at `https://<IP>:`
+Once deployed, access the wazuh UI at `https://<IP>:`
 
 
 ## Ludus Game of Active Directory (GOAD) Wazuh setup
@@ -146,6 +157,8 @@ ludus:
       block_internet: false
     roles:
       - aleemladha.wazuh_server_install
+    role_vars:
+      wazuh_admin_password: Wazuh-123
 
 ```
 
