@@ -16,7 +16,8 @@ An Ansible role that runs the Wazuh SIEM on a Linux system. By default, the pass
 
 ## Requirements
 
-None.
+The Wazuh Server Siem must not be Debian 12.
+it works on Ubuntu 22 , Kali-Linux 2024 
 
 ## Role Variables
 
