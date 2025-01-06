@@ -4,6 +4,8 @@
 
 The objective for this repo is to provide the Wazuh community with rulesets that are more accurate, descriptive, and enriched from various sources and integrations.
 
+# This will only work with ubuntu or kali. Wazuh does not support Debian 11,12
+
 Here's why:
 * Detection rules can be a tricky business and we believe everyone should have access to a strong and growing ruleset.
 * Wazuh serves as a great EDR agent, however the default rulesets are rather laxed (in our opinion). We wanted to start building a strong repo of Wazuh rules for the community to implement themselves and expand upon as new threats arise.
