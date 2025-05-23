@@ -16,6 +16,16 @@ galaxy_info:
         - bionic
         - focal
         - jammy
+        - noble
+        - oracular
+        - plucky
+    - name: Red Hat
+      versions:
+        - Santiago
+        - Maipo
+        - Ootpa
+        - Plow
+        - Cooughlan
   galaxy_tags:
     - wazuh
     - siem
